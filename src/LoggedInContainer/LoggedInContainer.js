@@ -43,31 +43,35 @@ class LoggedInContainer extends Component {
   }
 
   buyWheat(){
-    this.setState({
-      Money: this.state.Wheat - 1,
-      Wheat: this.state.Flour + 1,
-    });
+    if (this.state.Money >= 10)
+        this.setState({
+          Money: this.state.Money - 10,
+          Wheat: this.state.Wheat + 11,
+        });
   }
 
   grind(){
-    this.setState({
-      Wheat: this.state.Wheat - 1,
-      Flour: this.state.Flour + 1,
-    });
+    if (this.state.Wheat >= 1)
+      this.setState({
+        Wheat: this.state.Wheat - 1,
+        Flour: this.state.Flour + 1,
+      });
   }
 
   bakeBread(){
-    this.setState({
-      Flour: this.state.Flour - 1,
-      Bread: this.state.Bread + 1,
-    });
+    if (this.state.Flour >= 10)
+      this.setState({
+       Flour: this.state.Flour - 10,
+       Bread: this.state.Bread + 10,
+      });
   }
 
   sellBread(){
-    this.setState({
-      Bread: this.state.Bread - 1,
-      Money: this.state.Money + 1,
-    });
+    if (this.state.Bread >= 10)
+      this.setState({
+        Bread: this.state.Bread - 10,
+        Money: this.state.Money + 10,
+      });
   }
  
   render() {
