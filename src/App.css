@@ -22,6 +22,40 @@
   font-size: large;
 }
 
+#myGrindProgress {
+  width: 75%;
+  background-color: #ddd;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#myGrindBar {
+  width: 0%;
+  height: 30px;
+  background-color: #4CAF50;
+  text-align: left;
+  line-height: 30px;
+  color: white;
+}
+
+#myBakeProgress {
+  width: 75%;
+  background-color: #ddd;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#myBakeBar {
+  width: 0%;
+  height: 30px;
+  background-color: #4CAF50;
+  text-align: left;
+  line-height: 30px;
+  color: white;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
